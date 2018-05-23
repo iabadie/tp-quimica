@@ -1,11 +1,11 @@
 import React, { Component,  } from 'react';
-import { RingLoader, BounceLoader } from 'halogen'
+import { BounceLoader } from 'halogen'
 
 import Resultados from './Resultados';
-import { initProcess } from './api/api';
-import './App.css';
+import { initProcess } from '../../api/api';
+import './styles.css';
 
-class App extends Component {
+class Transformation extends Component {
   state = { datos: [], resultEntropia: [], temp: "", calor: null, entropia: null}
 
   handleValue = () => {
@@ -32,10 +32,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="App-header">
-          <RingLoader color="#26A65B" size="40px" margin="8px"/>
-          <h2>LA FÍSICA A TU ALCANCE</h2>
-        </div>
         <div>
           <div className="users-handler">
           <h1>¿Cuanto calor necesito para obtener vapor?</h1>
@@ -112,4 +108,4 @@ class App extends Component {
     );
   }
 }
-export default App;
+export default Transformation;
