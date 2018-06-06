@@ -29,7 +29,6 @@ class PeriodicTable extends Component {
   }
 
   render() {
-    debugger;
     return (
       <div className="App">
         <form className="users-selects">
