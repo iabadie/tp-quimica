@@ -16,7 +16,6 @@ class Transformation extends Component {
       return window.confirm("HIELO O AGUA?\n\nEl estado elegido es AGUA, por lo que su temperatura debe ser mayor o igual a 0 (cero) Cº y menor o igual a 100 (cien) Cº .");
     }
     const resultados = initProcess(parseFloat(this.refs.tempInicial.value, 10), parseFloat(this.refs.masa.value, 10), this.refs.estado.value);
-    console.log(resultados);
     this.setState({datos: resultados.data, calor: resultados.QalorTotalSuministrado, entropia: resultados.EntropiaTotal, resultEntropia: resultados.entropia});
   }
 

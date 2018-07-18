@@ -21,8 +21,8 @@ class PeriodicTable extends Component {
     return filtered
   }
 
-  changePeriod = event => this.setState({ period: event.target.value })
-  changeGroup = event => this.setState({ group: event.target.value })
+  changePeriod = event => this.setState({ period: event.target.value, selected: 1 })
+  changeGroup = event => this.setState({ group: event.target.value, selected: 1 })
   changeElement = event => {
     const result = data.find(element => element.number === parseInt(event.target.value))
     this.setState({ selectedElement: event.target.value || null, result: result ? result : {} })
@@ -31,6 +31,7 @@ class PeriodicTable extends Component {
   render() {
     return (
       <div className="App">
+        <div className="users-handler">
         <form className="users-selects">
           <h2>Buscar por:</h2>
           <div className="fiters-container">
@@ -57,9 +58,10 @@ class PeriodicTable extends Component {
         <div className="results-container">
           {this.state.result && Object.keys(this.state.result).map(label => (
             <p>
-              {`${label}: ${this.state.result[label] || ''}`}
+              {`${label.toUpperCase()}: ${this.state.result[label] || ''}`}
             </p>
           ))}
+        </div>
         </div>
       </div>
     );

@@ -46,7 +46,6 @@ export const initProcess = (Ti, masa, estadoInicial) => {
 
   let acumuladorCalor = 0;
   let acumuladorEntropia = 0;
-  debugger;
   if(estadoInicial === "Hielo") {
     if (Ti < 0) {
 
@@ -106,3 +105,14 @@ export const initProcess = (Ti, masa, estadoInicial) => {
     entropia
   }
 }
+
+
+
+////////////////////////////////////////////////////////////////
+// API PRESIONES
+////////////////////////////////////////////////////////////////
+
+export const getPresiones = (presiones, temp, vol) => ({
+  name: presiones.name,
+  value: (presiones.value * 0.082 * temp / vol).toFixed(2)
+})

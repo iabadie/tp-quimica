@@ -36,3 +36,14 @@
 .filter-container {
   margin: 10px 100px;
 }
+
+.users-handler {
+  display:flex;
+  background-color: #444;
+  flex: 1;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(top, #054D74, #FFF);
+}
